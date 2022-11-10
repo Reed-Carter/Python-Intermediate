@@ -14,3 +14,6 @@ def fourth_place(list_one: str ) -> str:
         print(E)
 
 fourth_place(short_list_of_mountains)
+
+subtracter_lambda = (lambda a, b: b - a)
+print(subtracter_lambda(2, 4))
