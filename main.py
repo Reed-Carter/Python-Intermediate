@@ -15,5 +15,38 @@ def fourth_place(list_one: str ) -> str:
 
 fourth_place(short_list_of_mountains)
 
+
 subtracter_lambda = (lambda a, b: b - a)
 print(subtracter_lambda(2, 4))
+
+
+class Shoe:
+    """The shoe object contains the size color and smell of a shoe
+
+    Parameters
+    ----------
+    US_size: int
+        The US size of a shoe
+    color: str
+        The color of the shoe
+    smelly: bool
+        If the shoe is smelly or not
+    """
+    def __init__(self, US_size: int, color: str, smelly: bool) -> str:
+        self.US_size = US_size
+        self.color = color
+        self.smelly = smelly
+
+    def euro_size(self):
+        """The function converts the US shoe size to a European shoe size
+
+        returns
+        -------
+        European shoe size: str
+        """
+        print(str(self.US_size + 33))
+
+Altra = Shoe(9,"blue", smelly=True)
+Altra.euro_size()
+Addidas = Shoe(11, "white", smelly=False)
+Addidas.euro_size()
