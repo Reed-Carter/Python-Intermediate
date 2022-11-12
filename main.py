@@ -1,3 +1,6 @@
+
+# question 1:
+
 short_list_of_mountains = ["Verstovia", "Bear", "South Sister"]
 def fourth_place(list_one: str ) -> str:
     """This is a function that returns the fourth item in a list.
@@ -15,10 +18,12 @@ def fourth_place(list_one: str ) -> str:
 
 fourth_place(short_list_of_mountains)
 
+# question 2:
 
 subtracter_lambda = (lambda a, b: b - a)
 print(subtracter_lambda(2, 4))
 
+# question 3:
 
 class Shoe:
     """The shoe object contains the size color and smell of a shoe
@@ -46,11 +51,12 @@ class Shoe:
         """
         print(str(self.US_size + 33))
 
-Altra = Shoe(9,"blue", smelly=True)
-Altra.euro_size()
-Addidas = Shoe(11, "white", smelly=False)
-Addidas.euro_size()
+altra = Shoe(9,"blue", smelly=True)
+altra.euro_size()
+addidas = Shoe(11, "white", smelly=False)
+addidas.euro_size()
 
+# question 4:
 
 def galaxy(name: str, *stuff: str, pluto_is_a_planet: True, **planets: str) -> str:
     """This is a function that returns a paragraph of galaxy facts.
@@ -64,7 +70,6 @@ def galaxy(name: str, *stuff: str, pluto_is_a_planet: True, **planets: str) -> s
     Returns:
         str: paragraph of galaxy facts
     """
-    galaxy_facts = ""
 
     solar_stuff = ""
     for i in (stuff):
@@ -86,7 +91,6 @@ def galaxy(name: str, *stuff: str, pluto_is_a_planet: True, **planets: str) -> s
         else:
             planet_string += f" {k} is the color {v},"
 
-    galaxy_facts += f"The {name} galaxy contains a lot of stuff including {len(planets)} planets {what_is_pluto} Here are the other planets in the galaxy and their color:{planet_string} The {name} galaxy also contains {solar_stuff}"
-    print(galaxy_facts)
+    print(f"The {name} galaxy contains a lot of stuff including {len(planets)} planets {what_is_pluto} Here are the other planets in the galaxy and their color:{planet_string} The {name} galaxy also contains {solar_stuff}")
 
 galaxy("Milky Way", "asteroids", "dust", "solar system", pluto_is_a_planet=True, Mercury = "slate gray", Mars = "red")
