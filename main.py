@@ -50,3 +50,43 @@ Altra = Shoe(9,"blue", smelly=True)
 Altra.euro_size()
 Addidas = Shoe(11, "white", smelly=False)
 Addidas.euro_size()
+
+
+def galaxy(name: str, *stuff: str, pluto_is_a_planet: True, **planets: str) -> str:
+    """This is a function that returns a paragraph of galaxy facts.
+
+    Args:
+        name (str): name of the galaxy
+        *stuff(str): Various items found in the galaxy
+        pluto_is_a_planet (True): if pluto is a planet
+        **planets(str): a dictionary where keys = the planet name and values = the planet color
+
+    Returns:
+        str: paragraph of galaxy facts
+    """
+    galaxy_facts = ""
+
+    solar_stuff = ""
+    for i in (stuff):
+        if i == stuff[-1]:
+            solar_stuff += f"and a {i}. "
+        else:
+            solar_stuff += f"{i}, "
+
+    what_is_pluto = ""
+    if pluto_is_a_planet == True:
+        what_is_pluto = "and pluto!"
+    else:
+       what_is_pluto = "not including pluto!"
+    
+    planet_string = ""
+    for k, v in planets.items():
+        if k == list(planets.keys())[-1]:
+            planet_string += f" and {k} is the color {v}."
+        else:
+            planet_string += f" {k} is the color {v},"
+
+    galaxy_facts += f"The {name} galaxy contains a lot of stuff including {len(planets)} planets {what_is_pluto} Here are the other planets in the galaxy and their color:{planet_string} The {name} galaxy also contains {solar_stuff}"
+    print(galaxy_facts)
+
+galaxy("Milky Way", "asteroids", "dust", "solar system", pluto_is_a_planet=True, Mercury = "slate gray", Mars = "red")
